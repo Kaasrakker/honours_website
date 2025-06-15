@@ -5,11 +5,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Physical Impact - Responsible Software Development Blog</title>
   <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* Override side images for this topic */
+    .side-image.left {
+      background-image: url('images/physical-impact-left.jpg');
+    }
+    .side-image.right {
+      background-image: url('images/physical-impact-right.jpg');
+    }
+  </style>
 </head>
 <body>
   <header>
+    <img src="https://www.uu.nl/themes/custom/uu_bootstrap/assets/images/logo.svg" alt="Utrecht University logo" />
     <h1>Responsible Software Development</h1>
-    <p>Building ethical, sustainable, and inclusive technology for a better world.</p>
+    <nav>
+      <ul class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="economic_impact.html">Economic Impact</a></li>
+        <li><a href="environmental_impact.html">Environmental Impact</a></li>
+        <li><a href="physiscal_impact.html" class="active">Physical Impact</a></li>
+        <li><a href="psychological_impact.html">Psychological Impact</a></li>
+      </ul>
+    </nav>
   </header>
 
   <div class="container" role="main">
@@ -25,10 +43,15 @@
       <ul class="topic-list">
         <li><a href="economic_impact.html">Economic Impact</a></li>
         <li><a href="environmental_impact.html">Environmental Impact</a></li>
-        <li><a href="physiscal_impact.html" aria-current="page">Physical Impact</a></li>
+        <li><a href="physiscal_impact.html" class="active">Physical Impact</a></li>
         <li><a href="psychological_impact.html">Psychological Impact</a></li>
       </ul>
     </aside>
+  </div>
+
+  <div class="side-images">
+    <div class="side-image left" aria-hidden="true"></div>
+    <div class="side-image right" aria-hidden="true"></div>
   </div>
 </body>
 </html>
