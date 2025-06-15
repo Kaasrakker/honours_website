@@ -1,108 +1,127 @@
-/* General Styles */
+/* Reset & base */
 body {
   margin: 0;
+  font-family: 'Georgia', serif;
+  background: #f9fafb;
+  color: #333;
+  line-height: 1.65;
   padding: 2rem;
-  background: linear-gradient(to right, #e0f2fe, #bae6fd);
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  min-height: 100vh;
-  color: #1e3a8a;
 }
 
-.page {
-  max-width: 900px;
-  margin: auto;
+a {
+  color: #2563eb;
+  text-decoration: none;
+}
+
+a:hover, a:focus {
+  text-decoration: underline;
+  outline: none;
+}
+
+/* Container */
+.container {
+  max-width: 960px;
+  margin: 0 auto;
   background: white;
-  border-radius: 1.5rem;
-  padding: 3rem 2.5rem;
-  box-shadow: 0 10px 25px rgb(59 130 246 / 0.15);
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgb(0 0 0 / 0.1);
+  display: flex;
+  gap: 2rem;
+  padding: 2rem;
 }
 
-h1 {
-  font-size: 3rem;
-  font-weight: 900;
-  margin-bottom: 0.5rem;
-  color: #1e3a8a;
-  text-align: center;
+/* Main content */
+.main-content {
+  flex: 3;
+  padding-right: 1rem;
+  border-right: 1px solid #e5e7eb;
 }
 
-h2 {
-  font-size: 2rem;
-  font-weight: 700;
-  margin-top: 3rem;
-  margin-bottom: 1.5rem;
+/* Sidebar */
+.sidebar {
+  flex: 1;
+  padding-left: 1rem;
+}
+
+/* Header */
+header {
+  max-width: 960px;
+  margin: 0 auto 2rem auto;
   text-align: center;
   color: #1e40af;
 }
 
-p {
+header h1 {
+  font-family: 'Georgia', serif;
+  font-size: 3rem;
+  margin-bottom: 0.25rem;
+}
+
+header p {
+  font-size: 1.25rem;
+  color: #4f46e5;
+}
+
+/* Blog intro */
+.intro-post {
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #e0e7ff;
+}
+
+.intro-post p {
   font-size: 1.125rem;
-  line-height: 1.6;
-  color: #2563eb;
-  text-align: center;
-  max-width: 700px;
-  margin: 1rem auto;
+  color: #374151;
 }
 
-/* Homepage Info Section */
-.info-section {
-  background: #f0f9ff;
-  border-radius: 1.25rem;
-  padding: 2rem 2.5rem;
-  margin: 2rem auto 3rem auto;
-  box-shadow: 0 5px 15px rgb(59 130 246 / 0.1);
+/* Sidebar title */
+.sidebar h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #1e40af;
+  border-bottom: 2px solid #3b82f6;
+  padding-bottom: 0.25rem;
 }
 
-/* Topic Links Section */
-.topics {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1.5rem;
+/* Topic links */
+.topic-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.topic-list li {
   margin-bottom: 1rem;
 }
 
-.topic-link {
-  background: white;
-  border: 2px solid #3b82f6;
-  color: #2563eb;
-  padding: 0.85rem 2rem;
-  border-radius: 1rem;
-  text-decoration: none;
+.topic-list a {
+  display: block;
+  background: #eff6ff;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgb(59 130 246 / 0.2);
   font-weight: 600;
-  font-size: 1.125rem;
-  box-shadow: 0 5px 12px rgb(59 130 246 / 0.25);
-  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
-  min-width: 180px;
-  text-align: center;
-  user-select: none;
+  color: #1e40af;
+  transition: background-color 0.3s ease;
 }
 
-.topic-link:hover,
-.topic-link:focus {
+.topic-list a:hover,
+.topic-list a:focus {
   background-color: #3b82f6;
   color: white;
-  box-shadow: 0 8px 20px rgb(59 130 246 / 0.5);
-  outline: none;
-  cursor: pointer;
+  box-shadow: 0 4px 12px rgb(59 130 246 / 0.4);
 }
 
-/* Responsive tweaks */
-@media (max-width: 480px) {
-  .page {
-    padding: 2rem 1.5rem;
+/* Responsive */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
   }
 
-  h1 {
-    font-size: 2.25rem;
-  }
-
-  h2 {
-    font-size: 1.5rem;
-  }
-
-  .topic-link {
-    min-width: 100%;
-    font-size: 1rem;
-    padding: 0.75rem 1rem;
+  .main-content,
+  .sidebar {
+    padding: 0;
+    border: none;
   }
 }
